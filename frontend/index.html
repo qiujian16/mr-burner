@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N+1 收割机</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ── Left sidebar ──────────────────────────────────────────── -->
+    <aside class="sidebar">
+
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">🌾</span>
+          <span class="logo-text">N+1 收割机</span>
+        </div>
+        <button id="new-session-btn" class="btn-new">+ 新咨询</button>
+      </div>
+
+      <!-- Provider selector -->
+      <div class="provider-row">
+        <label class="provider-label">AI 模型</label>
+        <select id="provider-select" class="provider-select">
+          <option value="claude">Claude</option>
+          <option value="minimax">MiniMax</option>
+          <option value="qwen">Qwen 通义</option>
+        </select>
+      </div>
+
+      <!-- Session list -->
+      <div class="section-title">历史咨询</div>
+      <div id="session-list" class="session-list"></div>
+
+      <!-- Case info panel -->
+      <div class="divider"></div>
+      <div class="section-title">案件信息</div>
+
+      <div class="info-panel">
+        <div class="info-group">
+          <div class="info-group-title">👤 员工情况</div>
+          <div class="info-row"><span class="lbl">工作年限</span><span class="val" id="i-years">—</span></div>
+          <div class="info-row"><span class="lbl">月薪基数</span><span class="val" id="i-salary">—</span></div>
+          <div class="info-row"><span class="lbl">12月总薪</span><span class="val" id="i-total">—</span></div>
+          <div class="info-row"><span class="lbl">未休年假</span><span class="val" id="i-leave">—</span></div>
+          <div class="info-row"><span class="lbl">待发奖金</span><span class="val" id="i-bonus">—</span></div>
+          <div class="info-row"><span class="lbl">股票情况</span><span class="val" id="i-stocks">—</span></div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-group-title">🏢 公司方案</div>
+          <div class="info-row full"><span class="val" id="i-offer-desc">—</span></div>
+          <div class="info-row"><span class="lbl">赔偿月数</span><span class="val" id="i-months">—</span></div>
+          <div class="info-row"><span class="lbl">总金额</span><span class="val accent" id="i-amount">—</span></div>
+        </div>
+
+        <div class="info-group" id="summary-group" style="display:none">
+          <div class="info-group-title">📝 案情摘要</div>
+          <div class="summary-text" id="i-summary"></div>
+        </div>
+      </div>
+
+      <button id="generate-analysis-btn" class="btn-analyze">生成分析报告</button>
+    </aside>
+
+    <!-- ── Main chat area ─────────────────────────────────────────── -->
+    <main class="chat-main">
+
+      <div class="chat-header">
+        <span id="chat-title">新咨询</span>
+        <span class="provider-badge" id="provider-badge">Claude</span>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <!-- Analysis panel (shown after generation) -->
+      <div id="analysis-panel" class="analysis-panel" style="display:none">
+        <div class="analysis-header">
+          <span>📊 分析报告</span>
+          <button id="close-analysis-btn" class="btn-icon">✕</button>
+        </div>
+        <div id="analysis-content" class="analysis-content"></div>
+      </div>
+
+      <div class="input-area">
+        <textarea
+          id="user-input"
+          placeholder="描述您的情况，或继续提问…（Enter 发送，Shift+Enter 换行）"
+          rows="2"
+        ></textarea>
+        <button id="send-btn" class="btn-send">发送</button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="app.js?v=6"></script>
+</body>
+</html>
