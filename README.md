@@ -1,6 +1,6 @@
 # Mr. Burns 合规离职顾问 ⚖️
 
-帮你从离职赔偿中榨取每一分应得的钱。AI-powered Chinese labor law consultant that fights back.
+帮你厘清法定权益，争取应得的每一分离职补偿。AI-powered Chinese labor law consultant for your severance rights.
 
 ## Quick start
 
