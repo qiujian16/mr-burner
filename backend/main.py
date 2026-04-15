@@ -17,7 +17,7 @@ from memory import ConsultationMemory
 from memory_palace import MemPalaceStore
 from providers import get_provider, DEFAULT_PROVIDER
 
-app = FastAPI(title="N+1 收割机")
+app = FastAPI(title="Mr. Burns 合规离职顾问")
 
 app.add_middleware(
     CORSMiddleware,

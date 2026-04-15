@@ -1,4 +1,4 @@
-# N+1 收割机 🌾
+# Mr. Burns 合规离职顾问 ⚖️
 
 帮你从离职赔偿中榨取每一分应得的钱。AI-powered Chinese labor law consultant that fights back.
 

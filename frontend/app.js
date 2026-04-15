@@ -77,8 +77,8 @@ async function startNewSession() {
 
   // Show welcome message locally (no API call needed)
   addMessage('assistant',
-    '您好，欢迎使用 N+1 收割机 🌾\n\n' +
-    '本系统专门帮您从离职赔偿中榨取每一分应得的钱：\n• 精准计算法定赔偿金\n• 识别公司方案的水分\n• 制定让HR坐立不安的谈判策略\n\n' +
+    '您好，欢迎使用 Mr. Burns 合规离职顾问 ⚖️\n\n' +
+    '本系统帮您依法核算应得补偿：\n• 精准计算法定赔偿金\n• 识别公司方案的不足\n• 制定合理合规的谈判策略\n\n' +
     '请先告诉我：**是公司通知您离职，还是双方"友好协商"？** 公司给出的理由是什么？'
   );
 

@@ -22,7 +22,7 @@ echo "📦 Installing dependencies…"
 pip install -q -r backend/requirements.txt
 
 echo ""
-echo "🌾 Starting N+1 收割机"
+echo "⚖️ Starting Mr. Burns 合规离职顾问"
 echo "   http://localhost:8000"
 echo ""
 
